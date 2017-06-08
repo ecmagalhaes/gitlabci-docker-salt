@@ -3,9 +3,9 @@ concurrent = 2
 [[runners]]
   name = "docker-debian"
   url = "http://GitLabCI"
-  token = "oCH9NsJy1s2y_8QUZJeA"
+  token = "*******"
   limit = 0
-  executor = "******"
+  executor = "docker"
   [runners.docker]
   host = ""
   tls_verify = false
