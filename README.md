@@ -30,7 +30,7 @@ Starting Salt:
 
 Advanced configuration:
 
-* [`config.toml`](./.config.toml)
+* [`config.toml`](./config.toml)
 
 
 ## Container Registry
