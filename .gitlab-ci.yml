@@ -1,0 +1,8 @@
+#before_script:
+
+Test Debian 8:
+  image: GitLabCI:4567/docker/salt/debian/8
+  script:
+    - sudo cp -R /builds/SaltStack/salt /srv/
+    - sudo cp -R /builds/SaltStack/pillar /srv/
+    - sudo salt-call --local state.apply --retcode-passthrough --force-color

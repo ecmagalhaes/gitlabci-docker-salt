@@ -1,0 +1,31 @@
+concurrent = 2
+
+[[runners]]
+  name = "docker-debian"
+  url = "http://GitLabCI"
+  token = "oCH9NsJy1s2y_8QUZJeA"
+  limit = 0
+  executor = "******"
+  [runners.docker]
+  host = ""
+  tls_verify = false
+  image = "GitLabCI:4567/docker/salt/debian/8"
+  privileged = true
+  disable_cache = false
+  volumes = ["/cache"]
+  [runners.cache]
+
+[[runners]]
+  name = "docker-centos"
+  url = "http://GitLabCI"
+  token = "******"
+  limit = 0
+  executor = "docker"
+  [runners.docker]
+  host = ""
+  tls_verify = false
+  image = "vGitLabCI:4567/docker/salt/centos/7"
+  privileged = true
+  disable_cache = false
+  volumes = ["/cache"]
+  [runners.cache]
