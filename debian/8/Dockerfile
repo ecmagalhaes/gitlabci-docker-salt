@@ -32,17 +32,5 @@ RUN echo $TZ > /etc/timezone && \
     ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && \
     dpkg-reconfigure -f noninteractive tzdata
 
-# Add NTP configuration
-# RUN */30 * * * * ntpdate -u corpnet.yourccc.com
-
 # add minion's configuration modules
 ADD conf/minion.d/* /etc/salt/minion.d/
-
-# add top level states
-#ADD conf/salt /srv/salt
-
-# add top level pillar
-#ADD conf/pillar /srv/pillar
-
-# create formulas' directory
-#RUN mkdir -p /srv/formulas
