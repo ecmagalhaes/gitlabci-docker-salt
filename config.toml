@@ -12,7 +12,7 @@ concurrent = 2
   image = "GitLabCI:4567/docker/salt/debian/8"
   privileged = true
   disable_cache = false
-  volumes = ["/cache"]
+  volumes = ["/sys/fs/cgroup:/sys/fs/cgroup:ro"]
   [runners.cache]
 
 [[runners]]
@@ -27,5 +27,5 @@ concurrent = 2
   image = "vGitLabCI:4567/docker/salt/centos/7"
   privileged = true
   disable_cache = false
-  volumes = ["/cache"]
+  volumes = ["/sys/fs/cgroup:/sys/fs/cgroup:ro"]
   [runners.cache]
