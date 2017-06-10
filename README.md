@@ -40,7 +40,7 @@ GitLab Container Registry is a secure and private registry for Docker images whi
 * [GitLab Container Registry](https://docs.saltstack.com/en/latest/topics/tutorials/quickstart.html)
 
 
-## Building Docker images
+## Building Docker image
 
 To build all the images, you can use the docker command `docker build`
 
@@ -54,11 +54,11 @@ To build all the images, you can use the docker command `docker build`
     GitLabCI:4567/docker/salt/centos/7   latest              fb493842efab        4 hours ago         381MB
     ...
 
-To test an image
+## Usage & Testing
 
-    $ docker run -ti --rm GitLabCI/docker/salt/debian/8
-    root@bead065bab20$
-    ...
+    $ docker run -d --privileged -v /sys/fs/cgroup:/sys/fs/cgroup:ro GitLabCI:4567/docker/salt/debian/8
+
+    $ docker exec -it $CONTAINER_ID bash
 
 
 ## Minion's configuration
@@ -71,6 +71,8 @@ To update the masterless Minion's configuration, edit this and rebuild the image
 ## References
 
 * [docker-salt-masterless](https://github.com/psmiraglia/docker-salt-masterless)
+* [jrei/systemd-debian](https://hub.docker.com/r/jrei/systemd-debian/)
+* [centos/systemd](https://hub.docker.com/r/centos/systemd/)
 * [Salt Masterless Quickstart](https://docs.saltstack.com/en/latest/topics/tutorials/quickstart.html)
 * [Configuring the Salt Minion](https://docs.saltstack.com/en/latest/ref/configuration/minion.html)
 * [Configuring the Salt Master](https://docs.saltstack.com/en/latest/ref/configuration/master.html)
