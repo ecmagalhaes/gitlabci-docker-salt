@@ -27,4 +27,4 @@ RUN yum clean all \
     && yum clean all
 
 # add minion's configuration modules
-ADD conf/minion.d/* /etc/salt/minion.d/
+ADD centos/7/conf/minion.d/conf/minion.d/* /etc/salt/minion.d/
